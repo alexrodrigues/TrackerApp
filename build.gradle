@@ -10,6 +10,7 @@ buildscript {
     ext.gsonConverterVersion = "2.1.0"
     ext.rxjavaConverter = "2.0.2"
     ext.lifecycleVersion = "1.1.1"
+    ext.locationHelper = "0.1.0"
 
     repositories {
         google()
@@ -28,7 +29,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven { url 'https://jitpack.io' }
     }
 }
 

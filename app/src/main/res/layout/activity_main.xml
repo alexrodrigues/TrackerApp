@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             tools:text="Latitude: 8329493938"
             android:layout_margin="@dimen/margin_16"
+            android:text="@{vm.latitudeText}"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +31,7 @@
             android:layout_height="wrap_content"
             tools:text="Longitude: 5435454543"
             android:layout_margin="@dimen/margin_16"
+            android:text="@{vm.longitudeText}"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_latitude" />
