@@ -43,7 +43,7 @@ class TrackerViewModel @Inject constructor(
 
     private fun startTrackerPool() {
         disposable.add(Observable
-            .interval(25, TimeUnit.SECONDS)
+            .interval(40, TimeUnit.SECONDS)
             .repeat()
             .observeOn(mainThread)
             .subscribe {
@@ -52,7 +52,7 @@ class TrackerViewModel @Inject constructor(
     }
 
     private fun sendLocations() {
-        disposable.add(interactor.sendLocations(list.map { it.toTrackLocation() })
+        disposable.add(interactor.sendLocations(list.map { it.toTrackLocation() }.distinct())
             .subscribeOn(ioThread)
             .observeOn(mainThread)
             .doOnError {
