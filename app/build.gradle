@@ -47,7 +47,8 @@ dependencies {
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$gsonConverterVersion"
-    implementation "com.squareup.retrofit2:adapter-rxjava:$rxjavaConverter"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rxjavaConverter"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHttp"
 
     // Live Data
     implementation "android.arch.lifecycle:extensions:$project.lifecycleVersion"

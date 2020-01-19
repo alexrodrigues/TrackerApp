@@ -2,6 +2,7 @@ package br.com.rodriguesalex.tracker.presentation.trackerHome.di
 
 import androidx.lifecycle.ViewModel
 import br.com.rodriguesalex.tracker.di.module.ViewModelKey
+import br.com.rodriguesalex.tracker.presentation.trackerHome.data.service.TrackerService
 import br.com.rodriguesalex.tracker.presentation.trackerHome.domain.TrackerInteractor
 import br.com.rodriguesalex.tracker.presentation.trackerHome.domain.TrackerInteractorImpl
 import br.com.rodriguesalex.tracker.presentation.trackerHome.presentation.TrackerActivity
@@ -12,6 +13,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
+import retrofit2.Retrofit
 import javax.inject.Singleton
 
 @Module

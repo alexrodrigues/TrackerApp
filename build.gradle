@@ -4,11 +4,12 @@ buildscript {
     ext.kotlin_version = '1.3.60'
     ext.dagger_version = '2.23.2'
     ext.gsonVersion = "2.8.5"
+    ext.okHttp = "3.4.1"
     ext.rx2Version = "2.2.8"
     ext.rxAndroidVersion = "2.1.0"
     ext.retrofitVersion = "2.6.3"
     ext.gsonConverterVersion = "2.1.0"
-    ext.rxjavaConverter = "2.0.2"
+    ext.rxjavaConverter = "2.4.0"
     ext.lifecycleVersion = "1.1.1"
     ext.locationHelper = "0.1.0"
 

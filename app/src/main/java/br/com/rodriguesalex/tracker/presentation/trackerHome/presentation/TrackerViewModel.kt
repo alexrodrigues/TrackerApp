@@ -15,6 +15,7 @@ import javax.inject.Inject
 import kotlin.collections.ArrayList
 
 sealed class TrackerViewModelState {
+    data class ResponseFromServer(val message: String): TrackerViewModelState()
     object LocationDenied: TrackerViewModelState()
     object LocationFailed: TrackerViewModelState()
 }
@@ -25,6 +26,7 @@ class TrackerViewModel @Inject constructor(
 ): ViewModel() {
 
     private val disposable = CompositeDisposable()
+    val state = MutableLiveData<TrackerViewModelState>()
 
     val latitudeText = MutableLiveData<String>()
     val longitudeText = MutableLiveData<String>()
@@ -53,8 +55,11 @@ class TrackerViewModel @Inject constructor(
         disposable.add(interactor.sendLocations(list.map { it.toTrackLocation() })
             .subscribeOn(ioThread)
             .observeOn(mainThread)
+            .doOnError {
+                it.printStackTrace()
+            }
             .subscribe({
-                println(it)
+                state.value = TrackerViewModelState.ResponseFromServer(it.second)
             }, {
                 it.printStackTrace()
             }))
