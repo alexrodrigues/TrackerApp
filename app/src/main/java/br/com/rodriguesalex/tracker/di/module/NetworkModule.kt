@@ -1,7 +1,6 @@
 package br.com.rodriguesalex.tracker.di.module
 
 import br.com.rodriguesalex.tracker.presentation.trackerHome.data.service.TrackerService
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

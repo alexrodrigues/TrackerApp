@@ -37,7 +37,7 @@ class TrackerViewModel @Inject constructor(
         longitudeText.value = "Longitude: ${location.longitude}"
         list.add(location)
         if (list.size == 1) {
-            startTrackerPool()
+            sendLocations()
         }
     }
 
@@ -55,9 +55,6 @@ class TrackerViewModel @Inject constructor(
         disposable.add(interactor.sendLocations(list.map { it.toTrackLocation() }.distinct())
             .subscribeOn(ioThread)
             .observeOn(mainThread)
-            .doOnError {
-                it.printStackTrace()
-            }
             .subscribe({
                 state.value = TrackerViewModelState.ResponseFromServer(it.second)
             }, {

@@ -10,4 +10,5 @@ class AppTracker : DaggerApplication() {
         .application(this)
         .build()
 
+
 }

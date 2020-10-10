@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "30195127628",
+    "firebase_url": "https://alextracker-e78b6.firebaseio.com",
+    "project_id": "alextracker-e78b6",
+    "storage_bucket": "alextracker-e78b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30195127628:android:bb448df02b5a68aa212be9",
+        "android_client_info": {
+          "package_name": "br.com.rodriguesalex.tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30195127628-22gufpoou0h1s0ot8ui2pe697rpo5ttp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiFa1RFlVlb5iU8aitlRbmp6LBFXF4VKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30195127628-22gufpoou0h1s0ot8ui2pe697rpo5ttp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
